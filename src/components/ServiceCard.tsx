@@ -32,9 +32,9 @@ export default function ServiceCard({
       }}
     >
       <Link href={`/services/${slug}`} className="group block">
-        <div className="bg-card rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-border/50">
+        <div className="bg-card rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-border/50">
           {/* Image */}
-          <div className="relative h-52 overflow-hidden">
+          <div className="relative h-32 sm:h-52 overflow-hidden">
             <Image
               src={image}
               alt={title}
@@ -46,17 +46,17 @@ export default function ServiceCard({
           </div>
 
           {/* Content */}
-          <div className="p-6">
+          <div className="p-4 sm:p-6">
             <div className="flex items-start justify-between gap-4">
               <div className="flex-1">
-                <h3 className="font-heading font-bold text-lg text-dark group-hover:text-primary transition-colors duration-300 mb-2">
+                <h3 className="font-heading font-bold text-sm sm:text-lg text-dark group-hover:text-primary transition-colors duration-300 mb-1 sm:mb-2">
                   {title}
                 </h3>
-                <p className="text-muted text-sm leading-relaxed line-clamp-2">
+                <p className="text-muted text-[10px] sm:text-sm leading-relaxed line-clamp-2">
                   {description}
                 </p>
               </div>
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/25">
+              <div className="hidden sm:flex w-10 h-10 rounded-full bg-primary/10 items-center justify-center shrink-0 group-hover:bg-primary transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/25">
                 <HiArrowRight
                   className="text-primary group-hover:text-white transition-colors duration-300 group-hover:translate-x-0.5"
                   size={18}

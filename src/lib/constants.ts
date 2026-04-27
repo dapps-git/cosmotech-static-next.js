@@ -267,6 +267,66 @@ export const ABOUT_CONTENT = {
     "Our site-acquisition services, engineering experience, construction capabilities, and service commitment will enhance telecom operators to be successful in providing the best speed services.",
 };
 
+// Leadership Data
+export const LEADERSHIP = {
+  chairman: {
+    name: "Majeed.VV",
+    role: "Chairman",
+    bio: "The visionary architect behind the Cosmos Group venture, driving transformative growth in the telecom infrastructure sector.",
+    image: "/images/chairman.jpeg",
+  },
+  members: [
+    {
+      name: "Safuvan",
+      role: "Project Manager",
+      bio: "Expert in infrastructure project execution and coordination.",
+      image: "/images/project manager.jpeg",
+    },
+    {
+      name: "Shahin Kalodi",
+      role: "Operations Manager",
+      bio: "Managing end-to-end business operations with excellence.",
+      image: "/images/operation manager.jpeg",
+    },
+    {
+      name: "Sulthana",
+      role: "Accountant",
+      bio: "Heading financial planning and account management.",
+      image: "/images/sulthana.png",
+    },
+    {
+      name: "Ameer",
+      role: "Billing Head",
+      bio: "Streamlining billing processes and financial reporting.",
+      image: "/images/ameer billing head.png",
+    },
+    {
+      name: "Deepak",
+      role: "Civil Supervisor",
+      bio: "Overseeing structural and civil engineering quality and project execution.",
+      image: "/images/deepak civil.png",
+    },
+    {
+      name: "Gulzar",
+      role: "Electrical Supervisor",
+      bio: "Skilled supervisor managing electrical infrastructure projects.",
+      image: "/images/electrical supervisor dilshad.jpeg",
+    },
+    {
+      name: "Dilshad",
+      role: "Electrical Supervisor",
+      bio: "Driving electrical infrastructure safety and efficiency.",
+      image: "/images/dilshadnew.png",
+    },
+    {
+      name: "Junaid",
+      role: "Electrical Supervisor",
+      bio: "Expert in electrical systems and power distribution.",
+      image: "/images/electrical supervisor.jpeg",
+    },
+  ],
+};
+
 // Mission Content
 export const MISSION_CONTENT = [
   "Constructing quality cell sites by using experienced knowledge in telecommunication tower design for leading mobile network operators and Infra Providers.",

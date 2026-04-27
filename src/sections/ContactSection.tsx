@@ -76,14 +76,14 @@ export default function ContactSection() {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 bg-primary/20 text-primary-light text-sm font-semibold rounded-full mb-6">
+        <AnimatedSection className="text-center mb-10 lg:mb-16">
+          <span className="inline-block px-4 py-1.5 bg-primary/20 text-primary-light text-xs font-semibold rounded-full mb-4 lg:mb-6">
             Contact Us
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-4">
+          <h2 className="font-heading text-xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-3 lg:mb-4 lg:whitespace-nowrap">
             Get In <span className="text-primary">Touch</span>
           </h2>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto">
+          <p className="text-white/60 text-xs lg:text-lg max-w-2xl mx-auto px-4 lg:px-0">
             Have a project in mind? Let&apos;s discuss how we can help you achieve
             your infrastructure goals.
           </p>
@@ -193,7 +193,7 @@ export default function ContactSection() {
 
           {/* Contact Info */}
           <AnimatedSection direction="right" delay={0.2} className="lg:col-span-2">
-            <div className="space-y-6 h-full flex flex-col justify-center">
+            <div className="space-y-3 lg:space-y-6 flex flex-col justify-center">
               {contactInfo.map((item, i) => (
                 <motion.div
                   key={i}
@@ -201,21 +201,21 @@ export default function ContactSection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="group bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-primary/30 transition-all duration-300"
+                  className="group bg-white/5 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 lg:p-6 border border-white/10 hover:border-primary/30 transition-all duration-300"
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-primary/20 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors duration-300">
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl lg:rounded-2xl bg-stone-800 flex items-center justify-center shrink-0 border border-white/5">
                       <item.icon
-                        className="text-primary-light group-hover:text-white transition-colors"
-                        size={22}
+                        className="text-primary"
+                        size={18}
                       />
                     </div>
                     <div>
-                      <h3 className="font-heading font-semibold text-white mb-1">
+                      <h3 className="font-heading font-black text-[10px] lg:text-lg text-white mb-0.5">
                         {item.title}
                       </h3>
                       {item.details.map((detail, j) => (
-                        <p key={j} className="text-white/60 text-sm">
+                        <p key={j} className="text-white/60 text-[8px] lg:text-sm">
                           {detail}
                         </p>
                       ))}

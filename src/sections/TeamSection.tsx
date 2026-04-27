@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
 import { RESPONSIBILITIES, SAFETY_POLICY } from "@/lib/constants";
 import {
@@ -8,6 +9,7 @@ import {
   HiShieldCheck,
   HiCheckCircle,
   HiBadgeCheck,
+  HiArrowRight,
 } from "react-icons/hi";
 
 const teamMembers = [
@@ -28,7 +30,7 @@ export default function TeamSection() {
           <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-6">
             Our Team
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-black text-dark leading-tight mb-4">
+          <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-black text-dark leading-tight mb-4">
             Expert <span className="text-primary">Team Work</span>
           </h2>
           <p className="text-muted text-lg max-w-3xl mx-auto">
@@ -39,7 +41,7 @@ export default function TeamSection() {
         </AnimatedSection>
 
         {/* Team Members */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-16">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
           {teamMembers.map((member, i) => (
             <motion.div
               key={member}
@@ -56,6 +58,22 @@ export default function TeamSection() {
             </motion.div>
           ))}
         </div>
+
+        {/* Meet Leadership Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <Link
+            href="/leadership"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-heading font-semibold rounded-full hover:bg-primary-dark transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 group"
+          >
+            Meet Our Leadership Team
+            <HiArrowRight className="group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </motion.div>
 
         {/* Responsibilities & Safety */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
