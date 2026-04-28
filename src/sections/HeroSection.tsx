@@ -115,7 +115,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
-          className="mt-12 lg:mt-16 inline-flex flex-wrap gap-0.5 p-0.5 rounded-xl bg-white/5 backdrop-blur-md border border-white/10"
+          className="mt-12 lg:mt-16 grid grid-cols-4 gap-0.5 p-0.5 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 w-full lg:w-max"
         >
           {[
             { value: 500, suffix: "+", label: "Towers Built" },
@@ -125,15 +125,15 @@ export default function HeroSection() {
           ].map((stat, i) => (
             <div
               key={i}
-              className="flex flex-col px-3 py-2 lg:px-4 lg:py-3 rounded-lg lg:rounded-xl hover:bg-white/5 transition-colors group"
+              className="flex flex-col px-1 lg:px-4 py-2 rounded-lg lg:rounded-xl hover:bg-white/5 transition-colors group"
             >
               <div className="flex items-baseline gap-0.5">
                 <Counter value={stat.value} />
-                <span className="text-xs lg:text-sm font-heading font-bold text-primary">
+                <span className="text-[10px] lg:text-sm font-heading font-bold text-primary">
                   {stat.suffix}
                 </span>
               </div>
-              <span className="text-[8px] lg:text-[10px] text-white/40 uppercase tracking-widest font-medium mt-0.5 group-hover:text-white/60 transition-colors whitespace-nowrap">
+              <span className="text-[6px] sm:text-[8px] lg:text-[10px] text-white/40 uppercase tracking-tight sm:tracking-widest font-medium mt-0.5 group-hover:text-white/60 transition-colors whitespace-nowrap">
                 {stat.label}
               </span>
             </div>
