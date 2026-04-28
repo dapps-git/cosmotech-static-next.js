@@ -13,18 +13,17 @@ export default function LeadershipPage() {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Back Button */}
-      <div className="fixed top-4 left-4 z-50">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-1.5 px-4 py-2 bg-white shadow-md text-gray-700 hover:text-primary transition-all rounded-full text-xs font-bold border border-gray-200"
-        >
-          <HiArrowLeft size={14} />
-          Back
-        </Link>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-32 pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 relative">
+        {/* Back Button */}
+        <div className="mb-8">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-1.5 px-4 py-2 bg-white shadow-sm text-gray-700 hover:text-primary transition-all rounded-full text-xs font-bold border border-gray-200"
+          >
+            <HiArrowLeft size={14} />
+            Back
+          </Link>
+        </div>
         {/* Top Leadership Row */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 justify-items-center items-end mb-6 lg:mb-10">
           {topRowCards.map((member, i) => {
