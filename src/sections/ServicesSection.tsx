@@ -15,13 +15,13 @@ export default function ServicesSection() {
           <h2 className="font-heading text-2xl sm:text-4xl lg:text-4xl font-black text-dark leading-tight mb-4">
             Our <span className="text-primary">Services</span>
           </h2>
-          <p className="text-muted text-sm-2 max-w-2xl mx-auto">
+          <p className="text-muted text-sm max-w-2xl mx-auto">
             Comprehensive engineering solutions covering telecom infrastructure, civil works,
             electrical systems, and more.
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 items-stretch">
           {SERVICES.map((service, index) => (
             <ServiceCard
               key={service.id}

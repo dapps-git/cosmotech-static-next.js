@@ -15,14 +15,14 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-dark text-white">
+    <footer className="bg-white text-black  border-t border-black/5">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 py-8 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-12">
           {/* Company Info */}
           <div className="flex flex-col lg:col-span-5 pr-0 lg:pr-12">
             <div className="flex flex-col mb-2 lg:mb-3">
-              <div className="relative h-14 w-32 sm:h-16 sm:w-40 lg:h-24 lg:w-80 mb-1">
+              <div className="relative h-16 w-40 sm:h-20 sm:w-56 lg:h-28 lg:w-96 mb-1">
                 <Image
                   src="/images/Cosmo logo.webp"
                   alt="COSMOTECH Logo"
@@ -34,7 +34,7 @@ export default function Footer() {
                 Est.2023 Cosmos Group Venture
               </span>
             </div>
-            <p className="text-white/60 text-[10px] sm:text-xs lg:text-sm leading-tight lg:leading-relaxed mb-3 lg:mb-4">
+            <p className="text-black/60 text-[10px] sm:text-xs lg:text-sm leading-tight lg:leading-relaxed mb-3 lg:mb-4">
               Empowering connectivity through cutting-edge <br></br>telecom infrastructure solutions.
               <br></br> Established by Cosmos Group in 2023.
             </p>
@@ -50,7 +50,7 @@ export default function Footer() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-6 h-6 lg:w-10 lg:h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-all duration-300"
+                  className="w-6 h-6 lg:w-10 lg:h-10 rounded-full bg-black/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-black/60"
                   aria-label="Social link"
                 >
                   <Icon size={10} className="lg:size-4" />
@@ -70,7 +70,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-white/60 hover:text-primary transition-colors duration-200 text-[11px] sm:text-xs lg:text-sm flex items-center gap-1 lg:gap-2"
+                    className="text-black/60 hover:text-primary transition-colors duration-200 text-[11px] sm:text-xs lg:text-sm flex items-center gap-1 lg:gap-2"
                   >
                     <span className="w-1 h-1 lg:w-1.5 lg:h-1.5 rounded-full bg-primary/40" />
                     {link.label}
@@ -91,7 +91,7 @@ export default function Footer() {
                 <li key={service.id}>
                   <Link
                     href={`/services/${service.slug}`}
-                    className="text-white/60 hover:text-primary transition-colors duration-200 text-[11px] sm:text-xs lg:text-sm flex items-center gap-1 lg:gap-2 group"
+                    className="text-black/60 hover:text-primary transition-colors duration-200 text-[11px] sm:text-xs lg:text-sm flex items-center gap-1 lg:gap-2 group"
                   >
                     <span className="w-1 h-1 lg:w-1.5 lg:h-1.5 rounded-full bg-primary/40" />
                     {service.title.split(' ')[0]}
@@ -110,13 +110,13 @@ export default function Footer() {
             <div className="space-y-2 lg:space-y-4">
               <div className="flex items-start gap-1.5 lg:gap-3">
                 <FaMapMarkerAlt className="text-primary mt-0.5 shrink-0 text-[10px] lg:text-sm" />
-                <p className="text-white/60 text-[11px] sm:text-xs lg:text-sm leading-tight text-balance">
+                <p className="text-black/60 text-[11px] sm:text-xs lg:text-sm leading-tight text-balance">
                   Tirur, Malappuram
                 </p>
               </div>
               <div className="flex items-center gap-1.5 lg:gap-3">
                 <FaPhone className="text-primary shrink-0 text-[10px] lg:text-sm" />
-                <a href={`tel:${COMPANY.phone[0]}`} className="text-white/60 text-[11px] sm:text-xs lg:text-sm">
+                <a href={`tel:${COMPANY.phone[0]}`} className="text-black/60 text-[11px] sm:text-xs lg:text-sm">
                   {COMPANY.phone[0].slice(-10)}
                 </a>
               </div>
@@ -124,7 +124,7 @@ export default function Footer() {
                 <FaEnvelope className="text-primary shrink-0 text-[10px] lg:text-sm" />
                 <Link
                   href="/#contact"
-                  className="text-white/60 text-[11px] sm:text-xs lg:text-sm truncate"
+                  className="text-black/60 text-[11px] sm:text-xs lg:text-sm truncate"
                 >
                   Mail
                 </Link>
@@ -135,12 +135,12 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-black/5">
         <div className="max-w-7xl mx-auto px-4 lg:px-8 py-4 lg:py-6 flex flex-row items-center justify-between gap-2">
-          <p className="text-white/40 text-[10px] sm:text-xs lg:text-sm">
+          <p className="text-black/40 text-[10px] sm:text-xs lg:text-sm">
             &copy; 2026 {COMPANY.name}
           </p>
-          <p className="text-white/40 text-[10px] sm:text-xs lg:text-sm">
+          <p className="text-black/40 text-[10px] sm:text-xs lg:text-sm">
             A <span className="text-primary">Cosmos Group</span> Venture
           </p>
         </div>

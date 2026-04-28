@@ -22,15 +22,15 @@ export default function AboutSection() {
                 <br />
                 SOLUTIONS
               </h2>
-              <p className="text-muted text-xs lg:text-lg leading-relaxed mb-4">
+              <p className="text-muted text-sm lg:text-lg leading-relaxed mb-4">
                 {ABOUT_CONTENT.intro}
               </p>
               <blockquote className="border-l-2 lg:border-l-4 border-primary pl-4 lg:pl-6 py-1 mb-4">
-                <p className="text-dark/80 text-xs lg:text-base leading-relaxed">
+                <p className="text-dark/80 text-sm lg:text-base leading-relaxed">
                   &ldquo;{ABOUT_CONTENT.vision}&rdquo;
                 </p>
               </blockquote>
-              <p className="text-muted text-xs lg:text-base leading-relaxed mb-4">
+              <p className="text-muted text-sm lg:text-base leading-relaxed mb-4">
                 {ABOUT_CONTENT.history}
               </p>
             </div>
