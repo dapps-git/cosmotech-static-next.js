@@ -109,9 +109,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-cream">
+      <body className="min-h-screen flex flex-col bg-cream overflow-x-hidden">
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 overflow-x-hidden">{children}</main>
         <Footer />
         <WhatsAppButton />
       </body>
