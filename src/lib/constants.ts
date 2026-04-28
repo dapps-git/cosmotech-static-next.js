@@ -16,8 +16,8 @@ export const COMPANY = {
   mapEmbed:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.123456789!2d75.92!3d10.92!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDU1JzEyLjAiTiA3NcKwNTUnMTIuMCJF!5e0!3m2!1sen!2sin!4v1234567890",
   socialLinks: {
-    facebook: "https://facebook.com",
-    instagram: "https://instagram.com",
+    facebook: "https://www.facebook.com/share/1bMbAL4vYo/?mibextid=wwXIfr",
+    instagram: "https://www.instagram.com/cosmoteches?igsh=OGpoaXN4ZnRvMjNh",
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com",
   },
@@ -78,7 +78,7 @@ export const SERVICES = [
     slug: "civil-works",
     description:
       "Comprehensive civil engineering solutions including foundation work, structural construction, and site development for telecom and commercial projects.",
-    image: "/images/civil-works.png",
+    image: "/images/civil.jpg",
     icon: "building",
     features: [
       {
@@ -109,7 +109,7 @@ export const SERVICES = [
     slug: "electrical-solutions",
     description:
       "Professional electrical infrastructure services including power systems, distribution panels, backup power, and energy-efficient solutions.",
-    image: "/images/electrical-solutions.png",
+    image: "/images/electrical-solutions.jpg",
     icon: "bolt",
     features: [
       {
@@ -140,7 +140,7 @@ export const SERVICES = [
     slug: "elv-systems",
     description:
       "Extra Low Voltage system design and installation including CCTV, access control, fire alarm systems, and structured cabling.",
-    image: "/images/electrical-solutions.png",
+    image: "/images/elv.jpg", 
     icon: "shield",
     features: [
       {
@@ -171,7 +171,7 @@ export const SERVICES = [
     slug: "fiber-optic",
     description:
       "Complete fiber optic network solutions including cable laying, splicing, testing, and network design for high-speed connectivity.",
-    image: "/images/fiber-optic.png",
+    image: "/images/fiber-optic.jpg",
     icon: "network",
     features: [
       {
@@ -193,37 +193,6 @@ export const SERVICES = [
         title: "Testing & Commissioning",
         description:
           "Comprehensive OTDR testing, power meter measurements, and network commissioning for quality assurance.",
-      },
-    ],
-  },
-  {
-    id: 6,
-    title: "Pest Control Service",
-    slug: "pest-control",
-    description:
-      "Professional pest management services for telecom sites and commercial properties ensuring safe and hygienic environments.",
-    image: "/images/civil-works.png",
-    icon: "bug",
-    features: [
-      {
-        title: "General Pest Control",
-        description:
-          "Comprehensive pest control treatments for insects, rodents, and other common pests in commercial and industrial facilities.",
-      },
-      {
-        title: "Termite Treatment",
-        description:
-          "Specialized anti-termite treatments for buildings and structures using eco-friendly chemicals and modern techniques.",
-      },
-      {
-        title: "Fumigation Services",
-        description:
-          "Professional fumigation services for warehouses, storage facilities, and large commercial spaces.",
-      },
-      {
-        title: "Preventive Maintenance",
-        description:
-          "Regular scheduled pest management programs to prevent infestations and maintain a pest-free environment.",
       },
     ],
   },

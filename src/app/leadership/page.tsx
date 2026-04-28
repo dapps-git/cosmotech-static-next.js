@@ -7,6 +7,10 @@ import { LEADERSHIP } from "@/lib/constants";
 import { HiArrowLeft } from "react-icons/hi";
 
 export default function LeadershipPage() {
+  const leadershipCards = [LEADERSHIP.chairman, ...LEADERSHIP.members];
+  const topRowCards = leadershipCards.slice(0, 3);
+  const remainingCards = leadershipCards.slice(3);
+
   return (
     <main className="min-h-screen bg-white">
       {/* Back Button */}
@@ -20,89 +24,139 @@ export default function LeadershipPage() {
         </Link>
       </div>
 
-      {/* Header */}
-      <div className="pt-24 lg:pt-32 pb-6 lg:pb-10 px-4 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900">
-            Our Core Team
-          </h1>
-        </motion.div>
-      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-32 pb-20">
+        {/* Top Leadership Row */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 justify-items-center items-end mb-6 lg:mb-10">
+          {topRowCards.map((member, i) => {
+            const isChairman = i === 0;
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        {/* Chairman - Highlighted & Larger */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="flex justify-center mb-16"
-        >
-          <div className="group relative w-full max-w-xs sm:max-w-sm overflow-hidden bg-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 rounded-sm">
-            <div className="relative aspect-[4/5] w-full overflow-hidden">
-              <Image
-                src={LEADERSHIP.chairman.image}
-                alt={LEADERSHIP.chairman.name}
-                fill
-                className="object-cover object-top group-hover:scale-105 transition-all duration-700 ease-out"
-              />
-              {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              {/* Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                <span className="inline-block px-3 py-1 bg-primary/90 text-white text-[10px] font-bold uppercase tracking-widest mb-3 backdrop-blur-sm">
-                  {LEADERSHIP.chairman.role}
-                </span>
-                <h2 className="font-heading font-black text-white text-2xl lg:text-3xl leading-tight mb-2">
-                  {LEADERSHIP.chairman.name}
-                </h2>
-                <p className="text-white/80 text-sm mb-4 line-clamp-2">
-                  {LEADERSHIP.chairman.bio}
-                </p>
-                <div className="w-16 h-1 bg-primary rounded-full transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 delay-100" />
-              </div>
-            </div>
-          </div>
-        </motion.div>
+            return (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className={`group relative overflow-hidden rounded-sm cursor-pointer w-full ${isChairman
+                  ? "max-w-[310px]"
+                  : "max-w-[270px] self-end"
+                  }`}
+              >
+                <div
+                  className={`relative w-full overflow-hidden ${isChairman
+                    ? "aspect-[3.5/4.5]"
+                    : "aspect-[4/5]"
+                    }`}
+                >
+              // REMOVE grey/white frame by changing image fit + scale
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-8">
-          {LEADERSHIP.members.map((member, i) => (
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className={`object-cover object-center transition-all duration-700 ease-out ${isChairman
+                      ? "scale-[1.02] group-hover:scale-[1.05]"
+                      : "scale-[1.08] group-hover:scale-[1.12]"
+                      }`}
+                    onError={(e) => {
+                      const t = e.target as HTMLImageElement;
+                      t.src = "/images/about-engineers.png";
+                    }}
+                  />
+
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-t from-black/90 to-transparent group-hover:opacity-100 transition-opacity duration-500 ${isChairman
+                      ? "via-black/30 opacity-80"
+                      : "via-black/20 opacity-70"
+                      }`}
+                  />
+
+                  <div
+                    className={`absolute bottom-0 left-0 right-0 translate-y-2 group-hover:translate-y-0 transition-transform duration-500 ${isChairman
+                      ? "p-5 lg:p-6"
+                      : "p-3 sm:p-4"
+                      }`}
+                  >
+                    <h2
+                      className={`font-heading text-white leading-tight ${isChairman
+                        ? "font-black text-xl lg:text-2xl mb-2"
+                        : "font-bold text-sm sm:text-lg"
+                        }`}
+                    >
+                      {member.name}
+                    </h2>
+
+                    <p
+                      className={`font-medium ${isChairman
+                        ? "text-white/80 text-sm mb-3 line-clamp-2"
+                        : "text-gray-300 text-xs sm:text-sm line-clamp-2"
+                        }`}
+                    >
+                      {member.role}
+                    </p>
+
+                    {isChairman && (
+                      <p className="text-white/80 text-sm mb-4 line-clamp-2 max-w-xs">
+                        {member.bio}
+                      </p>
+                    )}
+
+                    <div
+                      className={`bg-white/20 overflow-hidden ${isChairman
+                        ? "w-16 h-1 rounded-full"
+                        : "w-full h-[2px] mt-3"
+                        }`}
+                    >
+                      <div
+                        className={`h-full bg-primary transition-transform duration-500 ease-out ${isChairman
+                          ? "origin-left scale-x-0 group-hover:scale-x-100"
+                          : "w-full -translate-x-full group-hover:translate-x-0"
+                          }`}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Remaining Leadership Members */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 justify-items-center items-start">
+          {remainingCards.map((member, i) => (
             <motion.div
               key={member.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="group relative overflow-hidden bg-gray-100 shadow-md hover:shadow-xl transition-all duration-500 rounded-sm cursor-pointer"
+              transition={{ delay: (i + 3) * 0.1 }}
+              className="group relative overflow-hidden rounded-sm cursor-pointer max-w-[270px] w-full"
             >
               <div className="relative aspect-[4/5] w-full overflow-hidden">
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
-                  className="object-cover object-top group-hover:scale-105 transition-all duration-700 ease-out"
+                  className="object-cover object-center"
                   onError={(e) => {
                     const t = e.target as HTMLImageElement;
                     t.src = "/images/about-engineers.png";
                   }}
                 />
-                {/* Gradient overlay */}
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-500" />
-                
-                {/* Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-5 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                  <h3 className="font-heading font-bold text-white text-[13px] sm:text-lg lg:text-xl leading-tight mb-1 line-clamp-1">
+
+                <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                  <h2 className="font-heading font-bold text-white text-sm sm:text-lg leading-tight mb-1">
                     {member.name}
-                  </h3>
-                  <p className="text-gray-300 text-[10px] sm:text-xs lg:text-sm font-medium line-clamp-2">
+                  </h2>
+
+                  <p className="text-gray-300 text-xs sm:text-sm font-medium line-clamp-2">
                     {member.role}
                   </p>
-                  <div className="w-full h-[2px] bg-white/20 mt-3 sm:mt-4 overflow-hidden">
-                    <div className="w-full h-full bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
+
+                  <div className="w-full h-[2px] bg-white/20 mt-3 overflow-hidden">
+                    <div className="w-full h-full bg-primary -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
                   </div>
                 </div>
               </div>
@@ -118,11 +172,14 @@ export default function LeadershipPage() {
             Guided by Integrity &{" "}
             <span className="text-primary">Excellence</span>
           </h2>
-          <p className="text-gray-500 text-sm lg:text-base leading-relaxed italic">
-            &ldquo;Our leadership team is committed to setting new benchmarks in engineering
-            and telecommunications infrastructure, ensuring sustainable growth
-            and technological advancement for all our partners.&rdquo;
+
+          <p className="text-gray-500 text-sm lg:text-base leading-relaxed">
+            &ldquo;Our leadership team is committed to setting new benchmarks in
+            engineering and telecommunications infrastructure, ensuring
+            sustainable growth and technological advancement for all our
+            partners.&rdquo;
           </p>
+
           <div className="w-12 h-1 bg-primary mx-auto rounded-full mt-6" />
         </div>
       </section>

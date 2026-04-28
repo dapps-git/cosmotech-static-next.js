@@ -18,9 +18,9 @@ export default function Footer() {
     <footer className="bg-dark text-white">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 py-8 lg:py-16">
-        <div className="grid grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8 xl:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-12">
           {/* Company Info */}
-          <div className="flex flex-col col-span-1 lg:col-span-5 pr-0 lg:pr-12">
+          <div className="flex flex-col lg:col-span-5 pr-0 lg:pr-12">
             <div className="flex flex-col mb-2 lg:mb-3">
               <div className="relative h-14 w-32 sm:h-16 sm:w-40 lg:h-24 lg:w-80 mb-1">
                 <Image
@@ -60,7 +60,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="col-span-1 lg:col-span-2">
+          <div className="lg:col-span-2">
             <h3 className="font-heading font-semibold text-sm lg:text-lg mb-3 lg:mb-6 relative">
               Quick Links
               <span className="absolute -bottom-1 left-0 w-4 lg:w-8 h-0.5 bg-primary rounded-full" />
@@ -81,9 +81,9 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div className="col-span-1 lg:col-span-2">
+          <div className="lg:col-span-2">
             <h3 className="font-heading font-semibold text-sm lg:text-lg mb-3 lg:mb-6 relative">
-              Services
+              Our Services
               <span className="absolute -bottom-1 left-0 w-4 lg:w-8 h-0.5 bg-primary rounded-full" />
             </h3>
             <ul className="space-y-1.5 lg:space-y-3">
@@ -102,9 +102,9 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div className="col-span-1 lg:col-span-3">
+          <div className="lg:col-span-3">
             <h3 className="font-heading font-semibold text-sm lg:text-lg mb-3 lg:mb-6 relative">
-              Contact
+              Contact Us
               <span className="absolute -bottom-1 left-0 w-4 lg:w-8 h-0.5 bg-primary rounded-full" />
             </h3>
             <div className="space-y-2 lg:space-y-4">
@@ -122,12 +122,12 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-1.5 lg:gap-3">
                 <FaEnvelope className="text-primary shrink-0 text-[10px] lg:text-sm" />
-                <a
-                  href={`mailto:${COMPANY.email}`}
+                <Link
+                  href="/#contact"
                   className="text-white/60 text-[11px] sm:text-xs lg:text-sm truncate"
                 >
                   Mail
-                </a>
+                </Link>
               </div>
             </div>
           </div>

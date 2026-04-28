@@ -45,21 +45,25 @@ export default function ContactSection() {
       icon: HiPhone,
       title: "Phone",
       details: COMPANY.phone,
+      href: `tel:${COMPANY.phone[0]}`,
     },
     {
       icon: HiMail,
       title: "Email",
       details: [COMPANY.email],
+      href: `mailto:${COMPANY.email}`,
     },
     {
       icon: HiLocationMarker,
       title: "Address",
       details: [COMPANY.address.full],
+      href: COMPANY.mapLink,
     },
     {
       icon: HiGlobe,
       title: "Website",
       details: [COMPANY.website],
+      href: `https://${COMPANY.website}`,
     },
   ];
 
@@ -195,33 +199,36 @@ export default function ContactSection() {
           <AnimatedSection direction="right" delay={0.2} className="lg:col-span-2">
             <div className="space-y-3 lg:space-y-6 flex flex-col justify-center">
               {contactInfo.map((item, i) => (
-                <motion.div
+                <motion.a
                   key={i}
+                  href={item.href}
+                  target={item.title === "Address" || item.title === "Website" ? "_blank" : undefined}
+                  rel={item.title === "Address" || item.title === "Website" ? "noopener noreferrer" : undefined}
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="group bg-white/5 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 lg:p-6 border border-white/10 hover:border-primary/30 transition-all duration-300"
+                  className="group bg-white/5 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 lg:p-6 border border-white/10 hover:border-primary/30 transition-all duration-300 block cursor-pointer"
                 >
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-xl lg:rounded-2xl bg-stone-800 flex items-center justify-center shrink-0 border border-white/5">
                       <item.icon
-                        className="text-primary"
+                        className="text-primary group-hover:scale-110 transition-transform duration-300"
                         size={20}
                       />
                     </div>
                     <div>
-                      <h3 className="font-heading font-black text-sm sm:text-base lg:text-lg text-white mb-1">
+                      <h3 className="font-heading font-black text-sm sm:text-base lg:text-lg text-white mb-1 group-hover:text-primary transition-colors">
                         {item.title}
                       </h3>
                       {item.details.map((detail, j) => (
-                        <p key={j} className="text-white/60 text-xs sm:text-sm">
+                        <p key={j} className="text-white/60 text-xs sm:text-sm group-hover:text-white/80 transition-colors">
                           {detail}
                         </p>
                       ))}
                     </div>
                   </div>
-                </motion.div>
+                </motion.a>
               ))}
             </div>
           </AnimatedSection>

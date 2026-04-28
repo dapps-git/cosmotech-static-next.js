@@ -26,7 +26,7 @@ export default function AboutSection() {
                 {ABOUT_CONTENT.intro}
               </p>
               <blockquote className="border-l-2 lg:border-l-4 border-primary pl-4 lg:pl-6 py-1 mb-4">
-                <p className="text-dark/80 italic text-xs lg:text-base leading-relaxed">
+                <p className="text-dark/80 text-xs lg:text-base leading-relaxed">
                   &ldquo;{ABOUT_CONTENT.vision}&rdquo;
                 </p>
               </blockquote>
