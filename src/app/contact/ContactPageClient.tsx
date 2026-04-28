@@ -203,27 +203,35 @@ export default function ContactPageClient() {
                     icon: HiLocationMarker,
                     title: "Office Address",
                     content: COMPANY.address.full,
-                    link: { text: "Get Directions →", href: COMPANY.mapLink },
+                    href: COMPANY.mapLink,
+                    target: "_blank",
                   },
                   {
                     icon: HiPhone,
                     title: "Call Us",
                     content: COMPANY.phone.join(" / "),
+                    href: `tel:${COMPANY.phone[0]}`,
                   },
                   {
                     icon: HiMail,
                     title: "Email Us",
                     content: COMPANY.email,
+                    href: `mailto:${COMPANY.email}`,
                   },
                   {
                     icon: HiGlobe,
                     title: "Website",
                     content: COMPANY.website,
+                    href: `https://${COMPANY.website}`,
+                    target: "_blank",
                   },
                 ].map((item, i) => (
-                  <div
+                  <a
                     key={i}
-                    className="bg-card rounded-2xl p-6 shadow-sm border border-border/50 hover:shadow-md hover:border-primary/30 transition-all duration-300 group"
+                    href={item.href}
+                    target={item.target}
+                    rel={item.target ? "noopener noreferrer" : undefined}
+                    className="bg-card rounded-2xl p-6 shadow-sm border border-border/50 hover:shadow-md hover:border-primary/30 transition-all duration-300 group block cursor-pointer"
                   >
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors duration-300">
@@ -233,23 +241,20 @@ export default function ContactPageClient() {
                         />
                       </div>
                       <div>
-                        <h3 className="font-heading font-semibold text-dark mb-1">
+                        <h3 className="font-heading font-semibold text-dark mb-1 group-hover:text-primary transition-colors">
                           {item.title}
                         </h3>
-                        <p className="text-muted text-sm">{item.content}</p>
-                        {"link" in item && item.link && (
-                          <a
-                            href={item.link.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-primary text-sm font-medium hover:underline mt-1 inline-block"
-                          >
-                            {item.link.text}
-                          </a>
+                        <p className="text-muted text-sm group-hover:text-dark/70 transition-colors">
+                          {item.content}
+                        </p>
+                        {item.title === "Office Address" && (
+                          <span className="text-primary text-sm font-medium hover:underline mt-1 inline-block">
+                            Get Directions →
+                          </span>
                         )}
                       </div>
                     </div>
-                  </div>
+                  </a>
                 ))}
 
                 {/* Map */}
