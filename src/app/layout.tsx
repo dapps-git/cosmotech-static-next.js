@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
-import { Montserrat, DM_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { getOrganizationSchema, getLocalBusinessSchema } from "@/lib/schema";
 
-const montserrat = Montserrat({
+const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-heading",
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const dmSans = DM_Sans({
+const inter = Inter({
   variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
@@ -93,7 +93,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${montserrat.variable} ${dmSans.variable} antialiased`}
+      className={`${plusJakartaSans.variable} ${inter.variable} antialiased`}
     >
       <head>
         <script
