@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { getOrganizationSchema, getLocalBusinessSchema } from "@/lib/schema";
@@ -109,7 +110,8 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-cream overflow-x-hidden">
+      <body className="min-h-screen flex flex-col bg-cream overflow-x-hidden pt-[56px] sm:pt-[40px] md:pt-[32px]">
+        <TopBar />
         <Navbar />
         <main className="flex-1 overflow-x-hidden">{children}</main>
         <Footer />

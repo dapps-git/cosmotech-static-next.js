@@ -60,10 +60,10 @@ export default function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isHome
-            ? scrolled
-              ? "bg-white/95 backdrop-blur-xl shadow-lg shadow-black/5"
-              : "bg-transparent"
-            : "bg-white/95 backdrop-blur-xl shadow-lg shadow-black/5 border-b border-border/50"
+          ? scrolled
+            ? "bg-white/95 backdrop-blur-xl shadow-lg shadow-black/5"
+            : "bg-transparent"
+          : "bg-white/95 backdrop-blur-xl shadow-lg shadow-black/5 border-b border-border/50"
           }`}
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -89,12 +89,12 @@ export default function Navbar() {
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link)}
                   className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${isHome
-                      ? activeSection === link.sectionId
-                        ? scrolled ? "text-primary" : "text-white"
-                        : scrolled ? "text-dark/70 hover:text-primary" : "text-white/70 hover:text-white"
-                      : activeSection === link.sectionId
-                        ? "text-primary"
-                        : "text-dark/70 hover:text-primary"
+                    ? activeSection === link.sectionId
+                      ? scrolled ? "text-primary" : "text-white"
+                      : scrolled ? "text-dark/70 hover:text-primary" : "text-white/70 hover:text-white"
+                    : activeSection === link.sectionId
+                      ? "text-primary"
+                      : "text-dark/70 hover:text-primary"
                     }`}
                 >
                   {link.label}
@@ -122,11 +122,10 @@ export default function Navbar() {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className={`lg:hidden p-2 rounded-xl transition-colors ${isLeadershipPage ? "text-dark" : scrolled ? "text-dark" : "text-white"
-                }`}
+              className="lg:hidden p-2 rounded-xl transition-colors text-white"
               aria-label="Toggle menu"
             >
-              {mobileOpen ? <HiX size={28} /> : <HiMenu size={28} />}
+              {mobileOpen ? <HiX size={28} color="#fff" /> : <HiMenu size={28} color="#fff" />}
             </button>
           </div>
         </nav>
