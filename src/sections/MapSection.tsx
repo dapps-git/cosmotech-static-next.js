@@ -12,7 +12,7 @@ export default function MapSection() {
           <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-6">
             Our Location
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-black text-dark leading-tight mb-4">
+          <h2 className="font-heading text-2xl sm:text-4xl lg:text-4xl font-black text-dark leading-tight mb-4">
             Find <span className="text-primary">Us Here</span>
           </h2>
         </AnimatedSection>

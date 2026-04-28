@@ -30,10 +30,10 @@ export default function TeamSection() {
           <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-6">
             Our Team
           </span>
-          <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-black text-dark leading-tight mb-4">
+          <h2 className="font-heading text-2xl sm:text-2xl lg:text-3xl font-black text-dark leading-tight mb-4">
             Expert <span className="text-primary">Team Work</span>
           </h2>
-          <p className="text-muted text-lg max-w-3xl mx-auto">
+          <p className="text-muted text-md max-w-3xl mx-auto">
             Our team of experts and professional engineers including architects,
             designers, civil engineers, and other specialists bring years of experience
             in the field of civil and telecom engineering.

@@ -22,13 +22,13 @@ export default function PartnershipsSection() {
           <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-[10px] lg:text-sm font-semibold rounded-full mb-4 lg:mb-6">
             Our Network
           </span>
-          <h2 className="font-heading text-lg lg:text-4xl font-black text-dark leading-tight mb-3 lg:mb-4">
+          <h2 className="font-heading text-lg lg:text-3xl font-black text-dark leading-tight mb-3 lg:mb-4">
             Trusted Partnerships with
             <br className="hidden lg:block" />
             {" "}
             <span className="text-primary truncate uppercase font-heading">Leading MNCs</span>
           </h2>
-          <p className="text-muted text-xs lg:text-lg max-w-3xl mx-auto px-2 lg:px-0">
+          <p className="text-muted text-xs lg:text-sm max-w-3xl mx-auto px-2 lg:px-0">
             Affiliated with renowned multinational corporations through parent
             conglomerate, the &quot;Cosmos Group.&quot;
           </p>
@@ -46,13 +46,20 @@ export default function PartnershipsSection() {
               whileHover={{ y: -5, scale: 1.03 }}
               className="bg-card rounded-xl lg:rounded-2xl p-4 lg:p-8 flex flex-col items-center justify-center gap-3 shadow-sm hover:shadow-lg border border-border/50 transition-shadow duration-300 cursor-pointer group"
             >
-              <div
-                className={`w-10 h-10 lg:w-16 lg:h-16 rounded-xl lg:rounded-2xl bg-gradient-to-br ${partnerColors[i]} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}
+              <motion.div
+                animate={{ y: [0, -6, 0] }}
+                transition={{
+                  duration: 3 + i * 0.2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: i * 0.2,
+                }}
+                className={`w-10 h-10 lg:w-16 lg:h-16 rounded-xl lg:rounded-2xl bg-gradient-to-br ${partnerColors[i]} flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300`}
               >
                 <span className="text-white font-heading font-black text-sm lg:text-xl">
                   {partner.name.charAt(0)}
                 </span>
-              </div>
+              </motion.div>
               <span className="font-heading font-semibold text-[10px] lg:text-sm text-dark text-center">
                 {partner.name}
               </span>
