@@ -2,12 +2,13 @@
 
 import AnimatedSection from "@/components/AnimatedSection";
 import ServiceCard from "@/components/ServiceCard";
+import TrustedMarquee from "@/components/TrustedMarquee";
 import { SERVICES } from "@/lib/constants";
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-24 lg:py-32 bg-cream-light">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="bg-cream-light">
+      <div className="py-24 lg:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">
           <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-6">
             What We Do
@@ -34,6 +35,7 @@ export default function ServicesSection() {
           ))}
         </div>
       </div>
+      <TrustedMarquee />
     </section>
   );
 }

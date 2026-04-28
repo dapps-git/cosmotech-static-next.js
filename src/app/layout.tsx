@@ -110,7 +110,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-cream overflow-x-hidden pt-[56px] sm:pt-[40px] md:pt-[32px]">
+      <body className="min-h-screen flex flex-col bg-white overflow-x-hidden">
         <TopBar />
         <Navbar />
         <main className="flex-1 overflow-x-hidden">{children}</main>

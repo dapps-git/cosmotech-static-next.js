@@ -5,7 +5,6 @@ import { motion, animate, useInView, useMotionValue, useTransform } from "framer
 import Image from "next/image";
 import Link from "next/link";
 import { HiArrowDown } from "react-icons/hi";
-import TrustedMarquee from "@/components/TrustedMarquee";
 
 function Counter({ value }: { value: number }) {
   const count = useMotionValue(0);
@@ -51,7 +50,7 @@ export default function HeroSection() {
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-32 pb-8 sm:pt-36 sm:pb-12 lg:pt-0 lg:pb-0">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-40 pb-8 sm:pt-44 sm:pb-12 lg:pt-48 lg:pb-0">
         <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -141,10 +140,6 @@ export default function HeroSection() {
           ))}
         </motion.div>
 
-        {/* Trusted Marquee */}
-        <div className="w-full flex justify-center absolute left-0 right-0" style={{ top: "calc(100% + 12px)" }}>
-          <TrustedMarquee />
-        </div>
       </div>
 
       {/* Scroll Indicator */}

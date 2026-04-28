@@ -22,8 +22,16 @@
 html,
 body {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 96px;
   overflow-x: hidden;
+}
+
+@media (min-width: 1024px) {
+
+  html,
+  body {
+    scroll-padding-top: 128px;
+  }
 }
 
 /* Custom Scrollbar */

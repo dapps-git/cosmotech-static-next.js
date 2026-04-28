@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
+import TrustedMarquee from "@/components/TrustedMarquee";
 import { HiArrowRight } from "react-icons/hi";
 
 interface Service {
@@ -89,6 +90,9 @@ export default function ServicePageClient({ services }: { services: Service[] })
           </div>
         </div>
       </section>
+
+      {/* Trusted Marquee */}
+      <TrustedMarquee />
     </>
   );
 }

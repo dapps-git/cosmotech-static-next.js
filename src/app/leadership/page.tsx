@@ -13,7 +13,7 @@ export default function LeadershipPage() {
 
   return (
     <main className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40 pb-20 relative">
         {/* Back Button */}
         <div className="mb-8">
           <Link
