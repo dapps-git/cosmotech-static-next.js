@@ -2,7 +2,8 @@
 
 import AnimatedSection from "@/components/AnimatedSection";
 import { COMPANY } from "@/lib/constants";
-import { FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
+import { FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
+import { HiPhone } from "react-icons/hi";
 
 export default function MapSection() {
   return (
@@ -64,7 +65,7 @@ export default function MapSection() {
               <div className="bg-card rounded-2xl p-6 shadow-sm border border-border/50 hover:shadow-md transition-shadow">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0">
-                    <FaPhone className="text-primary" size={18} />
+                    <HiPhone className="text-primary" size={18} />
                   </div>
                   <div>
                     <h3 className="font-heading font-semibold text-dark mb-1">
