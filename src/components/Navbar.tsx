@@ -67,10 +67,10 @@ export default function Navbar() {
           }`}
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-24 lg:h-32">
+          <div className="flex items-center justify-between h-20 lg:h-28">
             {/* Logo */}
             <Link href="/" className="flex items-center group">
-              <div className="relative h-20 w-72 lg:h-28 lg:w-[450px] transition-all duration-300">
+              <div className="relative h-16 w-64 lg:h-24 lg:w-[400px] transition-all duration-300">
                 <Image
                   src="/images/Cosmo logo.webp"
                   alt="COSMOTECH Logo"
@@ -88,17 +88,13 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link)}
-                  className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${isLeadershipPage
-                    ? activeSection === link.sectionId
-                      ? "text-primary"
-                      : "text-dark/70 hover:text-primary"
-                    : activeSection === link.sectionId
-                      ? scrolled
+                  className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${isHome
+                      ? activeSection === link.sectionId
+                        ? scrolled ? "text-primary" : "text-white"
+                        : scrolled ? "text-dark/70 hover:text-primary" : "text-white/70 hover:text-white"
+                      : activeSection === link.sectionId
                         ? "text-primary"
-                        : "text-white"
-                      : scrolled
-                        ? "text-dark/70 hover:text-primary"
-                        : "text-white/70 hover:text-white"
+                        : "text-dark/70 hover:text-primary"
                     }`}
                 >
                   {link.label}
