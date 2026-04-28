@@ -59,19 +59,18 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isLeadershipPage
-            ? "bg-gray-100/95 backdrop-blur-xl border-b border-gray-200"
-            : scrolled
-              ? "bg-white/95 backdrop-blur-xl shadow-lg shadow-black/5"
-              : "bg-transparent"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isLeadershipPage
+          ? "bg-gray-100/95 backdrop-blur-xl border-b border-gray-200"
+          : scrolled
+            ? "bg-white/95 backdrop-blur-xl shadow-lg shadow-black/5"
+            : "bg-transparent"
+          }`}
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-14 lg:h-32">
+          <div className="flex items-center justify-between h-18 lg:h-24">
             {/* Logo */}
             <Link href="/" className="flex items-center group">
-              <div className="relative h-14 w-56 lg:h-24 lg:w-80 transition-all duration-300">
+              <div className="relative h-14 w-56 lg:h-20 lg:w-80 transition-all duration-300">
                 <Image
                   src="/images/Cosmo logo.webp"
                   alt="COSMOTECH Logo"
@@ -89,19 +88,18 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link)}
-                  className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${
-                    isLeadershipPage
-                      ? activeSection === link.sectionId
+                  className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${isLeadershipPage
+                    ? activeSection === link.sectionId
+                      ? "text-primary"
+                      : "text-dark/70 hover:text-primary"
+                    : activeSection === link.sectionId
+                      ? scrolled
                         ? "text-primary"
-                        : "text-dark/70 hover:text-primary"
-                      : activeSection === link.sectionId
-                        ? scrolled
-                          ? "text-primary"
-                          : "text-white"
-                        : scrolled
-                          ? "text-dark/70 hover:text-primary"
-                          : "text-white/70 hover:text-white"
-                  }`}
+                        : "text-white"
+                      : scrolled
+                        ? "text-dark/70 hover:text-primary"
+                        : "text-white/70 hover:text-white"
+                    }`}
                 >
                   {link.label}
                   {activeSection === link.sectionId && (
@@ -128,9 +126,8 @@ export default function Navbar() {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className={`lg:hidden p-2 rounded-xl transition-colors ${
-                isLeadershipPage ? "text-dark" : scrolled ? "text-dark" : "text-white"
-              }`}
+              className={`lg:hidden p-2 rounded-xl transition-colors ${isLeadershipPage ? "text-dark" : scrolled ? "text-dark" : "text-white"
+                }`}
               aria-label="Toggle menu"
             >
               {mobileOpen ? <HiX size={28} /> : <HiMenu size={28} />}

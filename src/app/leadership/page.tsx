@@ -48,7 +48,7 @@ export default function LeadershipPage() {
                     : "aspect-[4/5]"
                     }`}
                 >
-              // REMOVE grey/white frame by changing image fit + scale
+
 
                   <Image
                     src={member.image}
@@ -170,14 +170,14 @@ export default function LeadershipPage() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="font-heading text-xl lg:text-3xl font-black text-gray-900 mb-4">
             Guided by Integrity &{" "}
-            <span className="text-primary">Excellence</span>
+            <span className="text-primary">Excellence </span>
           </h2>
 
           <p className="text-gray-500 text-sm lg:text-base leading-relaxed">
             &ldquo;Our leadership team is committed to setting new benchmarks in
             engineering and telecommunications infrastructure, ensuring
             sustainable growth and technological advancement for all our
-            partners.&rdquo;
+            partners&rdquo;
           </p>
 
           <div className="w-12 h-1 bg-primary mx-auto rounded-full mt-6" />
