@@ -23,25 +23,25 @@ const teamMembers = [
 
 export default function TeamSection() {
   return (
-    <section id="team" className="py-24 lg:py-32 bg-cream-light">
+    <section id="team" className="py-12 lg:py-20 bg-cream-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Team Header */}
-        <AnimatedSection className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-6">
+        <AnimatedSection className="text-center mb-8 lg:mb-12">
+          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs lg:text-sm font-semibold rounded-full mb-4 lg:mb-6">
             Our Team
           </span>
-          <h2 className="font-heading text-2xl sm:text-2xl lg:text-3xl font-black text-dark leading-tight mb-4">
+          <h2 className="font-heading text-xl lg:text-3xl font-black text-dark leading-tight mb-3 lg:mb-4">
             Expert <span className="text-primary">Team Work</span>
           </h2>
-          <p className="text-muted text-md max-w-3xl mx-auto">
+          <p className="text-muted text-sm lg:text-md max-w-3xl mx-auto">
             Our team of experts and professional engineers including architects,
             designers, civil engineers, and other specialists bring years of experience
             in the field of civil and telecom engineering.
           </p>
         </AnimatedSection>
-
+ 
         {/* Team Members */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 lg:gap-4 mb-6">
           {teamMembers.map((member, i) => (
             <motion.div
               key={member}
@@ -49,12 +49,12 @@ export default function TeamSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="bg-card rounded-2xl p-5 text-center shadow-sm border border-border/50 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+              className="bg-card rounded-xl lg:rounded-2xl p-2 lg:p-4 text-center shadow-sm border border-border/50 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-md h-full flex flex-col items-center justify-center min-h-[80px] lg:min-h-[110px]"
             >
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                <HiUserGroup className="text-primary" size={22} />
+              <div className="w-8 h-8 lg:w-12 lg:h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2 shrink-0">
+                <HiUserGroup className="text-primary" size={18} />
               </div>
-              <span className="text-sm font-semibold text-dark">{member}</span>
+              <span className="text-[9px] lg:text-sm font-semibold text-dark leading-tight">{member}</span>
             </motion.div>
           ))}
         </div>

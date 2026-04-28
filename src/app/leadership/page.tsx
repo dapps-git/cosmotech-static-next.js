@@ -43,10 +43,7 @@ export default function LeadershipPage() {
                   }`}
               >
                 <div
-                  className={`relative w-full overflow-hidden ${isChairman
-                    ? "aspect-[3.5/4.5]"
-                    : "aspect-[4/5]"
-                    }`}
+                  className="relative w-full overflow-hidden aspect-[4/5]"
                 >
 
 
@@ -54,10 +51,7 @@ export default function LeadershipPage() {
                     src={member.image}
                     alt={member.name}
                     fill
-                    className={`object-cover object-center transition-all duration-700 ease-out ${isChairman
-                      ? "scale-[1.02] group-hover:scale-[1.05]"
-                      : "scale-[1.08] group-hover:scale-[1.12]"
-                      }`}
+                    className="object-cover object-center transition-all duration-700 ease-out group-hover:scale-105"
                     onError={(e) => {
                       const t = e.target as HTMLImageElement;
                       t.src = "/images/about-engineers.png";
