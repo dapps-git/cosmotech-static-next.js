@@ -57,7 +57,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="inline-block mt-2 lg:mt-4 px-2 py-1 text-primary-light text-[10px] lg:text-sm font-medium mb-5 lg:mb-4 font-body border border-primary/20 rounded-lg">
+            <span className="inline-block mt-2 lg:mt-4 px-2 py-1 text-primary-light text-[8px] lg:text-sm font-medium mb-4 lg:mb-4 font-body border border-primary/20 rounded-lg">
               Est. 2023 — A Cosmos Group Venture
             </span>
           </motion.div>
