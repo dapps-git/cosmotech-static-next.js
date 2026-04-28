@@ -95,7 +95,7 @@ export default function HeroSection() {
             className="flex flex-wrap gap-4"
           >
             <Link
-              href="/contact"
+              href="/#contact"
               className="group px-4 py-2.5 lg:px-8 lg:py-4 bg-primary text-white font-heading font-semibold text-sm lg:text-base rounded-full hover:bg-primary-dark transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-1 active:translate-y-0 flex items-center gap-2"
             >
               Get Started
