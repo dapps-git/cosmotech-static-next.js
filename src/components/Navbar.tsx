@@ -59,18 +59,13 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isHome
-          ? scrolled
-            ? "bg-white/95 backdrop-blur-xl shadow-lg shadow-black/5"
-            : "bg-transparent"
-          : "bg-white/95 backdrop-blur-xl shadow-lg shadow-black/5 border-b border-border/50"
-          }`}
+        className="fixed top-8 lg:top-10 left-0 right-0 z-50 transition-all duration-500 bg-white/95 backdrop-blur-xl shadow-lg shadow-black/5 border-b border-border/50"
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20 lg:h-28">
+          <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center group">
-              <div className="relative h-16 w-64 lg:h-24 lg:w-[400px] transition-all duration-300">
+              <div className="relative h-14 w-52 lg:h-16 lg:w-64 transition-all duration-300 transform scale-150 lg:scale-[1.8] origin-left z-20">
                 <Image
                   src="/images/Cosmo logo.webp"
                   alt="COSMOTECH Logo"
@@ -88,11 +83,7 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link)}
-                  className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${isHome
-                    ? activeSection === link.sectionId
-                      ? scrolled ? "text-primary" : "text-white"
-                      : scrolled ? "text-dark/70 hover:text-primary" : "text-white/70 hover:text-white"
-                    : activeSection === link.sectionId
+                  className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${activeSection === link.sectionId
                       ? "text-primary"
                       : "text-dark/70 hover:text-primary"
                     }`}
@@ -110,7 +101,7 @@ export default function Navbar() {
             </div>
 
             {/* Right Side */}
-            <div className="hidden lg:flex items-center gap-4">
+            <div className="hidden lg:flex items-center">
               <Link
                 href="/contact"
                 className="px-6 py-2.5 bg-primary text-white font-heading font-semibold text-sm rounded-full hover:bg-primary-dark transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 active:translate-y-0"

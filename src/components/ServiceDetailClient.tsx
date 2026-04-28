@@ -10,6 +10,7 @@ import {
   HiArrowRight,
   HiPhone,
 } from "react-icons/hi";
+import TrustedMarquee from "@/components/TrustedMarquee";
 
 interface ServiceDetailProps {
   serviceSlug: string;
@@ -213,6 +214,7 @@ export default function ServiceDetailClient({ serviceSlug }: ServiceDetailProps)
           </div>
         </div>
       </section>
+      <TrustedMarquee />
     </>
   );
 }
