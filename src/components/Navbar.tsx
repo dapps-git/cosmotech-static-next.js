@@ -120,12 +120,17 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Menu Toggle */}
+
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2 rounded-xl transition-colors text-white"
+              className="lg:hidden p-2 rounded-xl transition-colors text-black"
               aria-label="Toggle menu"
             >
-              {mobileOpen ? <HiX size={28} color="#fff" /> : <HiMenu size={28} color="#fff" />}
+              {mobileOpen ? (
+                <HiX size={28} color="#000" />
+              ) : (
+                <HiMenu size={28} color="#000" />
+              )}
             </button>
           </div>
         </nav>
