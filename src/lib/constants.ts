@@ -140,7 +140,7 @@ export const SERVICES = [
     slug: "elv-systems",
     description:
       "Extra Low Voltage system design and installation including CCTV, access control, fire alarm systems, and structured cabling.",
-    image: "/images/elv.jpg", 
+    image: "/images/elv.jpg",
     icon: "shield",
     features: [
       {
@@ -245,17 +245,18 @@ export const LEADERSHIP = {
     image: "/images/chairman.jpeg",
   },
   members: [
-    {
-      name: "Safuvan",
-      role: "Project Manager",
-      bio: "Expert in infrastructure project execution and coordination.",
-      image: "/images/project manager.jpeg",
-    },
+
     {
       name: "Shahin Kalodi",
       role: "Operations Manager",
       bio: "Managing end-to-end business operations with excellence.",
       image: "/images/operation manager.jpeg",
+    },
+    {
+      name: "Safuvan",
+      role: "Project Manager",
+      bio: "Expert in infrastructure project execution and coordination.",
+      image: "/images/project manager.jpeg",
     },
     {
       name: "Sulthana",
