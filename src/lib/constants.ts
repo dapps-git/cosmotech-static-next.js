@@ -303,7 +303,7 @@ export const LEADERSHIP = {
     {
       name: "Faijaz",
       role: "Civil Supervisor",
-      bio: "Overseeing daily civil engineering operations and site management.",
+      bio: "Overseeing daily civil engineering operations",
       image: "/images/Faijaz civil supervisor.webp",
     },
   ],
