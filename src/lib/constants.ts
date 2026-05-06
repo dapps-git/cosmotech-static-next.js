@@ -294,6 +294,18 @@ export const LEADERSHIP = {
       bio: "Expert in electrical systems and power distribution.",
       image: "/images/electrical supervisor.jpeg",
     },
+    {
+      name: "Abdul Khader",
+      role: "Civil Co-ordinator",
+      bio: "Coordinating civil works and ensuring seamless project execution.",
+      image: "/images/Abdul khader civil co ordinator.webp",
+    },
+    {
+      name: "Faijaz",
+      role: "Civil Supervisor",
+      bio: "Overseeing daily civil engineering operations and site management.",
+      image: "/images/Faijaz civil supervisor.webp",
+    },
   ],
 };
 
