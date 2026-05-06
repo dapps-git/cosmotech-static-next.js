@@ -288,12 +288,12 @@ export const LEADERSHIP = {
       bio: "Driving electrical infrastructure safety and efficiency.",
       image: "/images/dilshadnew.png",
     },
-    {
-      name: "Junaid",
-      role: "Electrical Supervisor",
-      bio: "Expert in electrical systems and power distribution.",
-      image: "/images/electrical supervisor.jpeg",
-    },
+    // {
+    //   name: "Junaid",
+    //   role: "Electrical Supervisor",
+    //   bio: "Expert in electrical systems and power distribution.",
+    //   image: "/images/electrical supervisor.jpeg",
+    // },
     {
       name: "Abdul Khader",
       role: "Civil Co-ordinator",
