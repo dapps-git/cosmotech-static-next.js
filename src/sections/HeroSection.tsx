@@ -50,7 +50,7 @@ export default function HeroSection() {
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-40 pb-8 sm:pt-44 sm:pb-12 lg:pt-48 lg:pb-0">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-40 pb-8 sm:pt-44 sm:pb-12 lg:pt-28 lg:pb-12">
         <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -115,7 +115,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
-          className="mt-12 lg:mt-16 grid grid-cols-4 gap-0.5 p-0.5 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 w-full lg:w-max"
+          className="mt-12 lg:mt-10 grid grid-cols-4 gap-0.5 p-0.5 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 w-full lg:w-max"
         >
           {[
             { value: 500, suffix: "+", label: "Towers Built" },
