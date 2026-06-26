@@ -202,22 +202,22 @@ export const SERVICES = [
 export const SISTER_COMPANIES = [
   {
     name: "Cosmos Electro Technical Cont. L.L.C",
-    logo: "/images/cosmos.png",
+    logo: "/images/cosmos.jpeg",
     location: "Abu Dhabi, UAE",
   },
   {
     name: "Creative Scope General Contracting L.L.C",
-    logo: "/images/creative.png",
+    logo: "/images/creativescope.png",
     location: "Abu Dhabi, UAE",
   },
   {
     name: "New Cosmos Electrical & Building Materials L.L.C",
-    logo: "/images/image.png",
+    logo: "/images/newcosmosis.png",
     location: "Abu Dhabi, UAE",
   },
   {
     name: "Telescope Network and Security Solutions L.L.C",
-    logo: "/images/telescope.png",
+    logo: "/images/telescop.png",
     location: "Abu Dhabi, UAE",
   },
 ];
@@ -225,17 +225,17 @@ export const SISTER_COMPANIES = [
 export const CLIENTS = [
   {
     name: "Indus Towers",
-    logo: "/images/client1.png",
+    logo: "/images/indus.png",
     category: "Telecom Infrastructure",
   },
   {
     name: "Ascend Telecom",
-    logo: "/images/client2.png",
+    logo: "/images/ascend.png",
     category: "Telecom Infrastructure",
   },
   {
     name: "TVS Supply Chain Solutions",
-    logo: "/images/client3.png",
+    logo: "/images/tvs.png",
     category: "Supply Chain & Logistics",
   },
 ];

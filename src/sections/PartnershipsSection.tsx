@@ -43,7 +43,7 @@ export default function PartnershipsSection() {
                     alt={company.name}
                     fill
                     sizes="(max-w-768px) 50vw, 25vw"
-                    className="object-contain p-2 transition-transform duration-300 group-hover:scale-105"
+                    className="object-contain p-6 transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <div className="mt-4 text-center w-full">
@@ -85,7 +85,7 @@ export default function PartnershipsSection() {
                     alt={client.name}
                     fill
                     sizes="(max-w-768px) 100vw, 33vw"
-                    className="object-contain p-1 transition-transform duration-300 group-hover:scale-105"
+                    className="object-contain p-5 transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <div className="mt-4 text-center w-full">
