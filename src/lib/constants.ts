@@ -198,14 +198,46 @@ export const SERVICES = [
   },
 ];
 
-// Partner/Venture Data
-export const PARTNERS = [
-  { name: "Cosmos Group", logo: null },
-  { name: "Starcon Infra", logo: null },
-  { name: "Truecom Networks", logo: null },
-  { name: "Cosmo Builders", logo: null },
-  { name: "Cosmos IT Solutions", logo: null },
-  { name: "Cosmos Trading", logo: null },
+// Sister Concerns and Clients
+export const SISTER_COMPANIES = [
+  {
+    name: "Cosmos Electro Technical Cont. L.L.C",
+    logo: "/images/cosmos.png",
+    location: "Abu Dhabi, UAE",
+  },
+  {
+    name: "Creative Scope General Contracting L.L.C",
+    logo: "/images/creative.png",
+    location: "Abu Dhabi, UAE",
+  },
+  {
+    name: "New Cosmos Electrical & Building Materials L.L.C",
+    logo: "/images/image.png",
+    location: "Abu Dhabi, UAE",
+  },
+  {
+    name: "Telescope Network and Security Solutions L.L.C",
+    logo: "/images/telescope.png",
+    location: "Abu Dhabi, UAE",
+  },
+];
+
+export const CLIENTS = [
+  {
+    name: "Indus Towers",
+    logo: "/images/client1.png",
+    category: "Telecom Infrastructure",
+  },
+  {
+    name: "Ascend Telecom",
+    logo: "/images/client2.png",
+    category: "Telecom Infrastructure",
+  },
+  {
+    name: "TVS Supply Chain Solutions",
+    logo: "/images/client3.png",
+    category: "Supply Chain & Logistics",
+  },
 ];
 
 // Team Responsibilities
