@@ -233,11 +233,7 @@ export const CLIENTS = [
     logo: "/images/ascend.png",
     category: "Telecom Infrastructure",
   },
-  {
-    name: "TVS Supply Chain Solutions",
-    logo: "/images/tvs.png",
-    category: "Supply Chain & Logistics",
-  },
+
 ];
 
 // Team Responsibilities
