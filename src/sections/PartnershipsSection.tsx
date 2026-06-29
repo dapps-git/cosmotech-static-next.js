@@ -68,7 +68,7 @@ export default function PartnershipsSection() {
             </h3>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6 max-w-5xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-4 lg:gap-6 max-w-5xl mx-auto">
             {CLIENTS.map((client, i) => (
               <motion.div
                 key={client.name}
@@ -77,7 +77,7 @@ export default function PartnershipsSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
                 whileHover={{ y: -6, scale: 1.02 }}
-                className="bg-card rounded-2xl p-4 flex flex-col items-center justify-between border border-border/50 shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer"
+                className="w-72 bg-card rounded-2xl p-4 flex flex-col items-center justify-between border border-border/50 shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer"
               >
                 <div className="relative w-full h-32 lg:h-36 flex items-center justify-center bg-white rounded-xl overflow-hidden p-2">
                   <Image
