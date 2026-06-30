@@ -233,7 +233,11 @@ export const CLIENTS = [
     logo: "/images/ascend.png",
     category: "Telecom Infrastructure",
   },
-
+  {
+    name: "Vedang",
+    logo: "/images/client4.png",
+    category: "Telecom Infrastructure"
+  }
 ];
 
 // Team Responsibilities
